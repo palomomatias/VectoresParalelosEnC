@@ -10,6 +10,7 @@ DEFINO no esta en memoria
 */
 
 void mostrarAlumno(char[][50],int[],int[],float[],int[],int);
+void cargarAlumno(char[][50],int[],int[],float[],int[],int);
 
 int main()
 {
@@ -18,6 +19,8 @@ int main()
     int notasDos[TAMANIO]={};
     float promedios[TAMANIO]={};
     int legajo[TAMANIO]={};
+    cargarAlumno(nombre,notasUno,notasDos,promedios,legajo,TAMANIO);
+
     mostrarAlumno(nombre,notasUno,notasDos,promedios,legajo,TAMANIO);
 
 
@@ -32,4 +35,8 @@ void mostrarAlumno(char nombres[][50],int primeraNota[],int segundaNota[],float 
     {
         printf("\nL:%d, N:%s,N1:%d,N2:%d,P:%.2f",legajos[i],nombres[i],primeraNota[i],segundaNota[i],promedio[i]);
     }
+}
+void cargarAlumno(char nombres[][50],int primeraNota[],int segundaNota[],float promedio[],int legajos[],int largo)
+{
+    legajos[1]=666;
 }
