@@ -11,6 +11,7 @@ DEFINO no esta en memoria
 
 void mostrarAlumno(char[][50],int[],int[],float[],int[],int);
 void cargarAlumno(char[][50],int[],int[],float[],int[],int);
+void buscarLugar(int,int[]);
 
 int main()
 {
@@ -38,5 +39,24 @@ void mostrarAlumno(char nombres[][50],int primeraNota[],int segundaNota[],float 
 }
 void cargarAlumno(char nombres[][50],int primeraNota[],int segundaNota[],float promedio[],int legajos[],int largo)
 {
-    legajos[1]=666;
+    int indice;
+    indice=buscarLugar(legajo,largo);
+
+    legajos[indice]=666;
+
+
+}
+void buscarLugar(int ,int largo[])
+{
+    int i;
+    int indiceRetornado=-1;
+    for(i=0;i<largo;i++)
+    {
+        if(legajo[i]==0)
+        {
+            indiceRetornado=i;
+            break;
+        }
+    }
+    return indiceRetornado;
 }
